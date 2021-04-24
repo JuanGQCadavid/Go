@@ -1,14 +1,68 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	//helloWorld()
-	//variablesDeclaration()
-	operators()
+	// helloWorld()
+	// variablesDeclaration()
+	//operators()
+	//challenge_one()
+}
+
+func challenge_one() {
+	const radio float32 = 5.6869
+	var circulo float32 = math.Pi * (radio * radio)
+
+	fmt.Println("Circulo ->", circulo)
+
+	const base int = 5
+	const altura int = 10
+
+	result := base * altura
+
+	fmt.Println("Rectangulo ->", result)
+
+	const base_a = 5
+	const base_b = 6
+	const h = 9
+
+	result = h * ((base_a * base_b) / 2)
+
+	fmt.Println("Trapecio ->", result)
+
 }
 
 func operators() {
+	fmt.Println("Lets do some operations")
+
+	x := 10
+	y := 20
+
+	var sum int = x + y
+	fmt.Println("Suma:", sum)
+
+	mult := x * y
+	fmt.Println("Mult", mult)
+
+	rest := x - y
+	fmt.Println("Resta", rest)
+
+	div := x / y
+	fmt.Println("Div", div)
+
+	mod := x % y
+	fmt.Println("Mod", mod)
+
+	// Incremental
+	x++
+	fmt.Println("Incremental", x)
+
+	// Decremental
+	x--
+	fmt.Println("Incremental", x)
 
 }
 
