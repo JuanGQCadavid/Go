@@ -3,8 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	// Declaracion de constantes
+	//helloWorld()
+	//variablesDeclaration()
+	operators()
+}
+
+func operators() {
+
+}
+
+func helloWorld() {
 	fmt.Println("Hello!")
+}
+
+func variablesDeclaration() {
+	// Declaracion de constantes
 	// 	name	Type = value
 	const pi float64 = 3.14 // Nunca cambiara en el tiempo
 	const pi2 = 3.15
