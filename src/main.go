@@ -10,6 +10,29 @@ func main() {
 	// variablesDeclaration()
 	//operators()
 	//challenge_one()
+	fmtUsage()
+}
+
+func fmtUsage() {
+
+	var hello string = "Hello"
+	var world string = "World"
+
+	fmt.Println(hello, world)
+	fmt.Println(hello, world)
+
+	names := "Platzi"
+	number := 500
+
+	fmt.Printf("%s has more than %d \n", names, number)
+	fmt.Printf("%v has more than %v \n", names, number)
+
+	message := fmt.Sprintf("%s has more than %d", names, number)
+	fmt.Println(message)
+
+	fmt.Printf("hello: %T \n", hello)
+	fmt.Printf("number: %T \n", number)
+
 }
 
 func challenge_one() {
