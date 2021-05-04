@@ -10,7 +10,38 @@ func main() {
 	// variablesDeclaration()
 	//operators()
 	//challenge_one()
-	fmtUsage()
+	//fmtUsage()
+	normalFunctionName("hi")
+	moreArgs(5, 6, "7")
+	fmt.Println(returnValue(5))
+
+	value1, value2 := doubleReturn(5)
+
+	fmt.Println(value1, value2)
+
+	// Descartar value 2
+	value1, _ = doubleReturn(10)
+
+	fmt.Println(value1)
+
+}
+
+func normalFunctionName(message string) {
+	fmt.Println(message)
+}
+
+// A y B son int
+func moreArgs(a, b int, c string) {
+	fmt.Println(a, b, c)
+}
+
+// THis one return two values
+func doubleReturn(a int) (c, d int) {
+	return a, a * 2
+}
+
+func returnValue(a int) int {
+	return a * a
 }
 
 func fmtUsage() {
@@ -33,6 +64,24 @@ func fmtUsage() {
 	fmt.Printf("hello: %T \n", hello)
 	fmt.Printf("number: %T \n", number)
 
+}
+
+func circleArea(radio float32) float32 {
+	var circulo float32 = math.Pi * (radio * radio)
+
+	fmt.Println("Circulo ->", circulo)
+
+	return circulo
+}
+
+func rectangleArea(base, high int) int {
+	result := base * high
+	fmt.Println("Rectangulo ->", result)
+	return result
+}
+
+func trapezeArea(base_a, base_b, h int) int {
+	return h * ((base_a * base_b) / 2)
 }
 
 func challenge_one() {
