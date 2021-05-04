@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"math"
+	"os"
+	"strings"
 )
 
 func main() {
@@ -11,18 +14,149 @@ func main() {
 	//operators()
 	//challenge_one()
 	//fmtUsage()
-	normalFunctionName("hi")
-	moreArgs(5, 6, "7")
-	fmt.Println(returnValue(5))
+	// normalFunctionName("hi")
+	// moreArgs(5, 6, "7")
+	// fmt.Println(returnValue(5))
 
-	value1, value2 := doubleReturn(5)
+	// value1, value2 := doubleReturn(5)
 
-	fmt.Println(value1, value2)
+	// fmt.Println(value1, value2)
 
-	// Descartar value 2
-	value1, _ = doubleReturn(10)
+	// // Descartar value 2
+	// value1, _ = doubleReturn(10)
 
-	fmt.Println(value1)
+	// fmt.Println(value1)
+
+	//ciclyes()
+
+	//logicOperations()
+
+	//conditions()
+
+	//readingFromConsole()
+
+	multipleCondictions()
+}
+
+func multipleCondictions() {
+
+	myNumber := 6 % 2
+	switch myNumber {
+	case 0:
+		fmt.Println("Par")
+	default:
+		fmt.Println("impar")
+	}
+
+	switch myNewNumber := 6 % 2; myNewNumber {
+	case 0:
+		fmt.Println("Par")
+	default:
+		fmt.Println("impar")
+	}
+
+	var myWord string = "I love my mother"
+
+	countsForA, countsForE, countsForI, countsForO, countsForU := findingVowels(myWord)
+
+	fmt.Println(countsForA, countsForE, countsForI, countsForO, countsForU)
+
+}
+
+func findingVowels(word string) (countsForA, countsForE, countsForI, countsForO, countsForU int) {
+	countsForA, countsForE, countsForI, countsForO, countsForU = 0, 0, 0, 0, 0
+
+	for _, value := range strings.ToLower(word) {
+
+		switch value {
+		case 'a':
+			countsForA++
+		case 'e':
+			countsForE++
+		case 'i':
+			countsForI++
+		case 'o':
+			countsForO++
+		case 'u':
+			countsForU++
+		}
+	}
+
+	return countsForA, countsForE, countsForI, countsForO, countsForU
+}
+
+func readingFromConsole() {
+	reader := bufio.NewReader(os.Stdin)
+
+	for {
+		fmt.Print("-> ")
+		text, _ := reader.ReadString('\n')
+		fmt.Println(text)
+	}
+}
+
+func conditions() {
+	valor1 := 1
+	valor2 := 2
+
+	if valor1 == 1 {
+		fmt.Println(valor1)
+	} else {
+		fmt.Println("Nop")
+	}
+
+	if valor1 == 1 || valor2 == 65 {
+		fmt.Println("Dude")
+	}
+}
+
+func logicOperations() {
+	fmt.Println("hola" != "hi")
+
+	fmt.Println("hola" == "hi")
+
+	fmt.Println((5 < 3) && (3 > 1))
+
+	fmt.Println((5 < 3) || (3 > 1))
+
+	fmt.Println(!true)
+}
+
+func ciclyes() {
+	// For condicional
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
+
+	// For While
+	counter := 0
+	for counter < 10 {
+		fmt.Println(counter)
+		counter++
+	}
+
+	// Forever
+	counterForever := 0
+	for {
+		fmt.Println(counterForever)
+		counterForever++
+
+		if counterForever == 20 {
+			break
+		}
+	}
+
+	var oddNumbers []int = []int{2, 4, 6, 8, 10}
+
+	for index, value := range oddNumbers {
+		fmt.Printf("Buuuuuu %v %v \n", index, value)
+	}
+
+	counter = 10
+	for counter >= 0 {
+		fmt.Println(counter)
+		counter--
+	}
 
 }
 
